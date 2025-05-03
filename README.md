@@ -1,44 +1,4 @@
-#include <iostream>
-#include <string>
-#include <sstream>
-#include <bitset>
-
-std::string decimalParaHexadecimal(int decimal) {
-    std::stringstream ss;
-    ss << std::hex << std::uppercase << decimal;
-    return ss.str();
-}
-
-std::string decimalParaBinario(int decimal) {
-    std::string binario;
-    if (decimal == 0) return "0";
-    while (decimal > 0) {
-        binario = (decimal % 2 == 0 ? "0" : "1") + binario;
-        decimal /= 2;
-    }
-    return binario;
-}
-
-int main() {
-    int decimal;
-    std::cout << "Digite um numero decimal: ";
-    std::cin >> decimal;
-
-    if (decimal < 0) {
-        std::cerr << "Erro: este programa so aceita numeros inteiros nao negativos.\n";
-        return 1;
-    }
-
-    std::string binario = decimalParaBinario(decimal);
-    std::string hexadecimal = decimalParaHexadecimal(decimal);
-
-    std::cout << "Binário: " << binario << std::endl;
-    std::cout << "Hexadecimal: " << hexadecimal << std::endl;
-
-    return 0;
-}
-
-
+codigo para transformar binario em hexadecimal e decimal
 
 #include <iostream>
 #include <string>
@@ -82,7 +42,51 @@ int main() {
     return 0;
 }
 
+    
+o codigo para transformar decimal em hexadecimal e binario
 
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <bitset>
+
+std::string decimalParaHexadecimal(int decimal) {
+    std::stringstream ss;
+    ss << std::hex << std::uppercase << decimal;
+    return ss.str();
+}
+
+std::string decimalParaBinario(int decimal) {
+    std::string binario;
+    if (decimal == 0) return "0";
+    while (decimal > 0) {
+        binario = (decimal % 2 == 0 ? "0" : "1") + binario;
+        decimal /= 2;
+    }
+    return binario;
+}
+
+int main() {
+    int decimal;
+    std::cout << "Digite um numero decimal: ";
+    std::cin >> decimal;
+
+    if (decimal < 0) {
+        std::cerr << "Erro: este programa so aceita numeros inteiros nao negativos.\n";
+        return 1;
+    }
+
+    std::string binario = decimalParaBinario(decimal);
+    std::string hexadecimal = decimalParaHexadecimal(decimal);
+
+    std::cout << "Binário: " << binario << std::endl;
+    std::cout << "Hexadecimal: " << hexadecimal << std::endl;
+
+    return 0;
+}
+
+
+codigo pra transformar hexadecimal em binario e decimal
 
 #include <iostream>
 #include <string>
